@@ -1,0 +1,2 @@
+# Triglav-Operating-System-T.O.S-
+An Operating System made in C and NASM for x86 architecture, 32 bits protected mode. 
