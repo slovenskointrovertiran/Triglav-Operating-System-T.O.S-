@@ -18,4 +18,4 @@ What will TriglavOS have ?
 WORK IN PROGRESS
 
 Current state :
-32 Bits protected mode, GDT implementation.
+32 bits mode is now fully implemented, GDT too. I will start to write the kernel in C and allow some basic things (6 june 2026)
