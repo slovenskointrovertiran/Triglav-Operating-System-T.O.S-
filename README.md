@@ -9,7 +9,7 @@ If you have some advices, contact me.
 
 What will TriglavOS have ?
 
-- A full inspired shell insipired by UNIX
+- A full shell insipired by UNIX
 - A file system (TFS)
 - Full support of english, french and slovene languages.
 - AZERTY, QWERTY, QWERTZ keyboards
