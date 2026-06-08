@@ -8,26 +8,24 @@ start:
     mov ss, ax
     mov sp, 0x7C00
 
-    ; --- CHARGEMENT DU NOYAU C DEPUIS LE DISQUE ---
-    ; On fait ça maintenant, car en mode protégé, le BIOS ne fonctionne plus !
-    mov ah, 0x02                ; Fonction BIOS : Lire des secteurs
-    mov al, 1                   ; Nombre de secteurs à lire (ajuste si ton C grossit)
-    mov ch, 0                   ; Cylindre 0
-    mov cl, 2                   ; Secteur 2 (le secteur 1 est le bootloader)
-    mov dh, 0                   ; Tête 0
-    ; Le BIOS stocke le numéro du lecteur de boot dans DL au démarrage, on le laisse tel quel
+    mov ah, 0x02                
+    mov al, 1                   ;à ajuster
+    mov ch, 0                   
+    mov cl, 2                   
+    mov dh, 0                   
+    
 
     mov bx, 0x0000
     mov es, bx
-    mov bx, 0x1000              ; On va charger le code C à l'adresse mémoire ES:BX (0x0000:0x1000)
-    int 0x13                    ; Appel interruption BIOS
-    jc disk_error               ; Si le drapeau Carry est activé, il y a une erreur
+    mov bx, 0x1000              
+    int 0x13                    
+    jc disk_error               
 
-    ; Message de transition (optionnel, retiré ici pour gagner de la place si besoin)
+    
     jmp switch_to_32bit
 
 disk_error:
-    ; Si ça échoue, on bloque
+    
     hlt
     jmp disk_error
 
@@ -53,8 +51,8 @@ init_pm:
     mov ebp, 0x90000
     mov esp, ebp
 
-    ; --- LE GRAND SAUT VERS LE C ---
-    ; On saute à l'adresse 0x1000, là où on a chargé notre code C
+    
+    
     jmp CODE_SEG:0x1000
 
 align 4
