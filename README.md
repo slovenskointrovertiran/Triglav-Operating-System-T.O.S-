@@ -24,5 +24,7 @@ Well, to be honest i think i will certainly change one of my project main base ;
 Screeenshot :
 <img width="721" height="462" alt="image" src="https://github.com/user-attachments/assets/b17aed84-50de-4008-9931-128e2178bc46" />
 
+#IMPORTANT : PROJECT CURRENTLY IN A REWORKING STATE. IT MAY HAVE STRONG CHANGES I'M THINKING ABOUT.
+
 
 
